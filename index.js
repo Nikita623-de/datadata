@@ -10,7 +10,6 @@ const path = require('path')
 const PORT = process.env.PORT || 5001
 
 const app = express()
-const cors = require('cors');
 const corsOptions = {
   credentials: true,
   origin: 'http://31.129.96.7:3000', // сменил на http://<имя моего домена>
