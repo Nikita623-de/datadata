@@ -10,13 +10,7 @@ const path = require('path')
 const PORT = process.env.PORT || 5001
 
 const app = express()
-const corsOptions = {
-  credentials: true,
-  origin: 'http://31.129.96.7:3000', // сменил на http://<имя моего домена>
-  allowedHeaders: ['Content-Type'],
-  optionsSuccessStatus: 200
-};
-app.use(cors(corsOptions));
+app.use(cors())
 app.use(express.json())
 app.use(express.static(path.resolve(__dirname, 'static')))
 app.use(fileUpload({}))
